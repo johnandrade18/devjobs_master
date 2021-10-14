@@ -1,0 +1,61 @@
+{
+  "name": "devjobs_master",
+  "version": "1.0.0",
+  "description": "Portal de empleo para desarrolladores",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon ./index.js --exec babel-node --ignore 'client'",
+    "client": " npm run start --prefix client",
+    "deploy": "babel-node ./index.js --ignore 'client'",
+    "start": "concurrently \" npm run deploy\" \"npm run client\"",
+    "dev": "concurrently \" npm run serve\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Developer-Systems/devjobs_master.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "vuejs",
+    "express"
+  ],
+  "author": "Devsystem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Developer-Systems/devjobs_master/issues"
+  },
+  "homepage": "https://github.com/Developer-Systems/devjobs_master#readme",
+  "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1624817847.21691f1",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.5",
+    "concurrently": "^6.2.2",
+    "core-js": "^3.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "jquery": "^3.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "shortid": "^2.2.16",
+    "slug": "^5.1.0",
+    "swiper": "^7.0.8",
+    "vue-sweetalert2": "^5.0.2",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+  }
+}
